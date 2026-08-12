@@ -1,0 +1,11 @@
+\section{\protect\hyperlink{:}{your section}}
+\addtocontents{toc}{\protect\hypertarget{:}{your section}} 
+\subsection{\protect\hyperlink{:}{your subsection}}
+\addtocontents{toc}{\protect\hypertarget{:}{your subsection}}
+
+%\section{\protect\hyperlink{:}{your section}}
+%\addtocontents{toc}{\protect\hypertarget{:}{your section}} 
+%\subsection{\protect\hyperlink{:}{your subsection}}
+%\addtocontents{toc}{\protect\hypertarget{:}{your subsection}}
+
+\href{URL}{Text}

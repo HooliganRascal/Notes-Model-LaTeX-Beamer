@@ -1,0 +1,17 @@
+\pagestyle{empty}
+\vspace*{12em}
+% 标题
+\begin{center}
+{\Huge 有限元方法上机实验报告}
+\end{center}
+\vspace{12em}  % 垂直间距
+% 信息
+\begin{center}
+{\Large  % 这里的字号也可以用别的方式修改
+\makebox[4em][s]{姓名}:\underline{\makebox[15em][c]{张三}}\\
+\makebox[4em][s]{学号}:\underline{\makebox[15em][c]{12138}}\\
+\makebox[4em][s]{班级}:\underline{\makebox[15em][c]{三年2班}}\\
+\makebox[4em][s]{任课老师}:\underline{\makebox[15em][c]{张伟}}\\
+}
+\end{center}
+\clearpage 

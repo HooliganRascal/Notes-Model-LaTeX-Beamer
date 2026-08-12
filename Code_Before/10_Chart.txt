@@ -1,0 +1,9 @@
+	\begin{center}
+	\textbf{表）}\\
+	\vspace{0.7em}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	&&&&
+	\hline\\
+	\end{tabular}
+	\end{center}

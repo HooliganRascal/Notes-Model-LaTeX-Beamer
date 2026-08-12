@@ -1,0 +1,16 @@
+\usepackage{fancyhdr}%导入fancyhdr包
+\usepackage{ctex}%导入ctex包
+\pagenumbering{Alph}%设置页码格式，大写字母标页
+\pagestyle{fancy}
+\fancyhead[L]{左页眉}
+\fancyhead[R]{右页眉}
+\fancyhead[L]{中间页眉}
+\fancyfoot[L]{左页脚}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{右页脚}
+\renewcommand{\headrulewidth}{4pt}%分隔线宽度4磅
+\renewcommand{\footrulewidth}{4pt}
+
+\thispagestyle{empty}
+\setcounter{page}{1}
+\addtocounter{framenumber}{-1}
