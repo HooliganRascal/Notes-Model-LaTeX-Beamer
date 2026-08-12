@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=1]
+	% Universal set rectangle
+	\draw[thick] (-2.4,-1.6) rectangle (2.4,1.6);
+	\node[above left] at (-2.4,1.6) {$M$};
+
+	% Two basic sets
+	\fill[blue!20] (-0.55,0) circle (0.9);
+	\fill[red!20] (0.75,0) circle (0.9);
+	\draw[thick] (-0.55,0) circle (0.9);
+	\draw[thick] (0.75,0) circle (0.9);
+	\node at (-0.95,0) {$A$};
+	\node at (1.15,0) {$B$};
+\end{tikzpicture}
+
+% Complement of the union: shade outside both circles
+\begin{tikzpicture}[scale=1]
+	\fill[violet!30, even odd rule] (-2.4,-1.6) rectangle (2.4,1.6)
+		(-0.55,0) circle (0.9)
+		(0.75,0) circle (0.9);
+	\draw[thick] (-2.4,-1.6) rectangle (2.4,1.6);
+	\fill[darkgray] (-0.55,0) circle (0.9);
+	\fill[darkgray] (0.75,0) circle (0.9);
+	\draw[thick] (-0.55,0) circle (0.9);
+	\draw[thick] (0.75,0) circle (0.9);
+	\node[above left] at (-2.4,1.6) {$M$};
+	\node at (-0.95,0) {$A$};
+	\node at (1.15,0) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,112 @@
+% !TEX program = xelatex
+% Chinese beamer model matching the LaTeX note style
+\documentclass[aspectratio=169]{beamer}
+
+% ---- Packages ----
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{diagbox}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{xeCJK}
+
+% ---- CJK fonts (same as the Chinese notes) ----
+\setCJKmainfont{Noto Serif CJK TC}
+\setCJKsansfont{Noto Sans CJK TC}
+\setCJKmonofont{Noto Serif CJK TC}
+
+% ---- Note colours (same as the LaTeX notes) ----
+\definecolor{notelightblue}{RGB}{185,220,245}
+\colorlet{noteobsidian}{violet!50!white}
+
+% ---- Dark theme matching the LaTeX notes ----
+\setbeamercolor{background canvas}{bg=darkgray}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{structure}{fg=cyan}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{section in toc}{fg=cyan}
+\setbeamercolor{itemize item}{fg=cyan}
+\setbeamercolor{itemize subitem}{fg=cyan}
+\setbeamercolor{block title}{fg=white, bg=gray!40!black}
+\setbeamercolor{block body}{fg=white, bg=gray!25!black}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \hfill\usebeamerfont{page number in head/foot}%
+  \insertframenumber/\inserttotalframenumber\hspace{1em}\vspace{0.75em}}
+
+\hypersetup{
+  colorlinks = true,
+  allcolors = cyan,
+  urlcolor = yellow,
+  breaklinks = true,
+}
+
+% ---- Remark boxes (same idea as \noteremark / \obsidianremark in the notes) ----
+\setbeamercolor{note remark}{bg=notelightblue}
+\setbeamercolor{obsidian remark}{bg=noteobsidian}
+\newcommand{\noteremark}[1]{%
+  \begin{beamercolorbox}[rounded=true, sep=6pt]{note remark}
+    \textcolor{black}{\textbf{Remark.} #1}
+  \end{beamercolorbox}\vspace{0.5em}}
+\newcommand{\obsidianremark}[1]{%
+  \begin{beamercolorbox}[rounded=true, sep=6pt]{obsidian remark}
+    \textcolor{black}{\textbf{Remark.} #1}
+  \end{beamercolorbox}\vspace{0.5em}}
+
+\title{标题}
+\author{Guernica-Cosmos}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{目录}
+  \tableofcontents
+\end{frame}
+
+\section{第一章：集合}
+
+\begin{frame}{引言}
+  \begin{itemize}
+    \item 第一点
+    \item 第二点
+    \item 第三点
+  \end{itemize}
+  \noteremark{在此处填写快速备注。}
+\end{frame}
+
+\begin{frame}{数学公式}
+  集合的德摩根律：
+  \[
+    \bigl(A\cup B\bigr)^{c}=A^{c}\cap B^{c}
+  \]
+  \obsidianremark{在此处填写与 Obsidian 笔记关联的备注。}
+\end{frame}
+
+\begin{frame}{TikZ 示意图}
+  \begin{center}
+    \begin{tikzpicture}[scale=1]
+      \draw[thick] (-2.4,-1.6) rectangle (2.4,1.6);
+      \node[above left] at (-2.4,1.6) {$M$};
+      \fill[blue!20] (-0.55,0) circle (0.9);
+      \fill[red!20] (0.75,0) circle (0.9);
+      \draw[thick] (-0.55,0) circle (0.9);
+      \draw[thick] (0.75,0) circle (0.9);
+      \node at (-0.95,0) {$A$};
+      \node at (1.15,0) {$B$};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\end{document}
