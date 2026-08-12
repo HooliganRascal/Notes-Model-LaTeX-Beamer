@@ -1,8 +1,6 @@
 % !TEX program = xelatex
-% Chinese beamer model matching the LaTeX note style
 \documentclass[aspectratio=169]{beamer}
 
-% ---- Packages ----
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -13,29 +11,23 @@
 \usepackage{soul}
 \usepackage{xeCJK}
 
-% ---- CJK fonts (same as the Chinese notes) ----
-\setCJKmainfont{Noto Serif CJK TC}
-\setCJKsansfont{Noto Sans CJK TC}
-\setCJKmonofont{Noto Serif CJK TC}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Serif CJK SC}
 
-% ---- Note colours (same as the LaTeX notes) ----
 \definecolor{notelightblue}{RGB}{185,220,245}
+\definecolor{mygreen}{rgb}{.125,.5,.25}
 \colorlet{noteobsidian}{violet!50!white}
 
-% ---- Dark theme matching the LaTeX notes ----
-\setbeamercolor{background canvas}{bg=darkgray}
-\setbeamercolor{normal text}{fg=white}
-\setbeamercolor{structure}{fg=cyan}
-\setbeamercolor{frametitle}{fg=white}
-\setbeamercolor{title}{fg=white}
-\setbeamercolor{subtitle}{fg=white}
-\setbeamercolor{author}{fg=white}
-\setbeamercolor{date}{fg=white}
-\setbeamercolor{section in toc}{fg=cyan}
-\setbeamercolor{itemize item}{fg=cyan}
-\setbeamercolor{itemize subitem}{fg=cyan}
-\setbeamercolor{block title}{fg=white, bg=gray!40!black}
-\setbeamercolor{block body}{fg=white, bg=gray!25!black}
+\usetheme[progressbar=frametitle]{metropolis}
+\setbeamertemplate{frame numbering}[fraction]
+\useoutertheme{metropolis}
+\useinnertheme{metropolis}
+\usefonttheme{metropolis}
+\usecolortheme{spruce}
+\usecolortheme[named=mygreen]{structure}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercovered{transparent=5}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{%
@@ -49,7 +41,6 @@
   breaklinks = true,
 }
 
-% ---- Remark boxes (same idea as \noteremark / \obsidianremark in the notes) ----
 \setbeamercolor{note remark}{bg=notelightblue}
 \setbeamercolor{obsidian remark}{bg=noteobsidian}
 \newcommand{\noteremark}[1]{%
@@ -62,10 +53,13 @@
   \end{beamercolorbox}\vspace{0.5em}}
 
 \title{标题}
+%\subtitle{Subtitle Here}
 \author{Guernica-Cosmos}
+\institute{\large \textbf{}:\\[6pt]Identify something}
 \date{\today}
 
 \begin{document}
+\metroset{block=fill}
 
 \begin{frame}
   \titlepage
@@ -88,9 +82,9 @@
 
 \begin{frame}{数学公式}
   集合的德摩根律：
-  \[
+  $$
     \bigl(A\cup B\bigr)^{c}=A^{c}\cap B^{c}
-  \]
+  $$
   \obsidianremark{在此处填写与 Obsidian 笔记关联的备注。}
 \end{frame}
 

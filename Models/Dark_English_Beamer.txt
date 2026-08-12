@@ -1,0 +1,101 @@
+% !TEX program = xelatex
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{diagbox}
+\usepackage{xcolor}
+\usepackage{soul}
+
+\definecolor{notelightblue}{RGB}{185,220,245}
+\colorlet{noteobsidian}{violet!50!white}
+
+\setbeamercolor{background canvas}{bg=darkgray}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{structure}{fg=cyan}
+\setbeamercolor{frametitle}{fg=white}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{section in toc}{fg=cyan}
+\setbeamercolor{itemize item}{fg=cyan}
+\setbeamercolor{itemize subitem}{fg=cyan}
+\setbeamercolor{block title}{fg=white, bg=gray!40!black}
+\setbeamercolor{block body}{fg=white, bg=gray!25!black}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \hfill\usebeamerfont{page number in head/foot}%
+  \insertframenumber/\inserttotalframenumber\hspace{1em}\vspace{0.75em}}
+
+\hypersetup{
+  colorlinks = true,
+  allcolors = cyan,
+  urlcolor = yellow,
+  breaklinks = true,
+}
+
+\setbeamercolor{note remark}{bg=notelightblue}
+\setbeamercolor{obsidian remark}{bg=noteobsidian}
+\newcommand{\noteremark}[1]{%
+  \begin{beamercolorbox}[rounded=true, sep=6pt]{note remark}
+    \textcolor{black}{\textbf{Remark.} #1}
+  \end{beamercolorbox}\vspace{0.5em}}
+\newcommand{\obsidianremark}[1]{%
+  \begin{beamercolorbox}[rounded=true, sep=6pt]{obsidian remark}
+    \textcolor{black}{\textbf{Remark.} #1}
+  \end{beamercolorbox}\vspace{0.5em}}
+
+\title{Mathematical Analysis}
+\author{Guernica}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Chapter 1: Sets}
+
+\begin{frame}{Introduction}
+  \begin{itemize}
+    \item First point
+    \item Second point
+    \item Third point
+  \end{itemize}
+  \noteremark{Use this box for a quick remark.}
+\end{frame}
+
+\begin{frame}{Mathematics}
+  De Morgan's law for sets:
+  \[
+    \bigl(A\cup B\bigr)^{c}=A^{c}\cap B^{c}
+  \]
+  \obsidianremark{Use this box for an Obsidian-linked remark.}
+\end{frame}
+
+\begin{frame}{TikZ Diagram}
+  \begin{center}
+    \begin{tikzpicture}[scale=1]
+      \draw[thick] (-2.4,-1.6) rectangle (2.4,1.6);
+      \node[above left] at (-2.4,1.6) {$M$};
+      \fill[blue!20] (-0.55,0) circle (0.9);
+      \fill[red!20] (0.75,0) circle (0.9);
+      \draw[thick] (-0.55,0) circle (0.9);
+      \draw[thick] (0.75,0) circle (0.9);
+      \node at (-0.95,0) {$A$};
+      \node at (1.15,0) {$B$};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\end{document}

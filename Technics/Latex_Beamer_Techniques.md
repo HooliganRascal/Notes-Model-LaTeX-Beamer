@@ -1,36 +1,10 @@
-\documentclass{beamer}
+# Latex Beamer Techniques
+---
 
-\usepackage{multicol}
-\usepackage[UTF8, scheme=plain]{ctex}
-
-\usetheme[progressbar=frametitle]{metropolis}
-\setbeamertemplate{frame numbering}[fraction]
-\usepackage[colorlinks=true,linkcolor=black,backref]{hyperref}
-\useoutertheme{metropolis}
-\useinnertheme{metropolis}
-\usefonttheme{metropolis}
-\usecolortheme{spruce}
-\setbeamercolor{background canvas}{bg=white}
-
-\definecolor{mygreen}{rgb}{.125,.5,.25}
-\usecolortheme[named=mygreen]{structure}
-
-\title{QQ}
-%\subtitle{Subtitle Here}
-\author{格尔尼卡}
-%\institute{\large \textbf{\doubledo}:\\[6pt]Identify something}
-\date{\today}
-
-\setbeamercovered{transparent=5}
-
-\begin{document}
-\metroset{block=fill}
-
-\begin{frame}
-\titlepage
-\end{frame}
-
+## Basic frame
+```tex
 \begin{frame}[t]{Functions}\vspace{4pt}
+
 \begin{block}{Definition of a Function}
 \vspace{0.5em}
 A \textbf{function} $f$ is a rule that assigns to each element $x$ in a set $D$ exactly one element, called $f(x)$, in a set $E$.
@@ -48,7 +22,10 @@ Set $E$ is called the
 \,of the function.
 
 \end{frame}
+```
 
+## Show by click
+```tex
 \begin{frame}[t]{Your Very First Card}\vspace{10pt}
 $\sqrt{x^2}=$\\[10pt]
 \begin{enumerate}[(A)]
@@ -71,17 +48,20 @@ $\sqrt{x^2}=$\\[10pt]
 \end{enumerate}
 \column{0.6\textwidth}
 \only<3>{
-$\sqrt{x^2}=
-\begin{cases}
--x,&x<0\\
-x,&x \geq 0
-\end{cases}$\\[10pt]}
+    $\sqrt{x^2}=\begin{cases}
+    -x,&x<0\\
+    x,&x \geq 0
+    \end{cases}$\\[10pt]
+}
 \only<2->{
 \includegraphics[scale=0.45]{1}
 }
 \end{columns}
 \end{frame}
+```
 
+## Slide to show
+```tex
 \begin{frame}[t]{Parent Functions}\vspace{4pt}
 You should be able to identify by name and sketch a graph of each of the following parent functions
 \begin{enumerate}
@@ -93,10 +73,12 @@ You should be able to identify by name and sketch a graph of each of the followi
 \end{multicols}
 \end{enumerate}
 \end{frame}
+```
 
+## Final page
+```tex
 \begin{frame}[standout]
 \flushleft
 Homework:p.342\#7-21
 \end{frame}
-
-\end{document}
+```

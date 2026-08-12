@@ -1,0 +1,44 @@
+# Beamer deck with ctex (Chinese): requires XeLaTeX, run through latexmk.
+
+# Use the first .tex file found in this directory, or override with
+# `make MAIN=myfile`.
+MAIN      ?= $(basename $(firstword $(wildcard *.tex)))
+TEX       := $(MAIN).tex
+PDF       := $(MAIN).pdf
+
+ifeq ($(MAIN),)
+$(error No .tex source found. Place a .tex file here or run `make MAIN=file`)
+endif
+
+SRCS      := $(TEX) $(wildcard *.jpg *.jpeg *.png *.eps)
+LATEXMK   := latexmk
+FLAGS     := -xelatex -interaction=nonstopmode -halt-on-error -synctex=1
+OPEN      ?= xdg-open
+AUXFILES  := $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(MAIN).dvi \
+             $(MAIN).fdb_latexmk $(MAIN).fls $(MAIN).log $(MAIN).nav \
+             $(MAIN).out $(MAIN).snm $(MAIN).synctex.gz $(MAIN).toc \
+             $(MAIN).xdv $(MAIN).pdf.info
+
+.PHONY: all clean distclean view watch
+
+all: $(PDF)
+
+$(PDF): $(SRCS)
+	$(LATEXMK) $(FLAGS) $(TEX)
+
+# Remove auxiliary files, keep the PDF.
+clean:
+	$(LATEXMK) -c
+	rm -f $(AUXFILES)
+
+# Remove auxiliary files and the PDF.
+distclean:
+	$(LATEXMK) -C
+	rm -f $(AUXFILES) $(PDF)
+
+view: $(PDF)
+	$(OPEN) $(PDF) &
+
+# Rebuild continuously while editing.
+watch:
+	$(LATEXMK) -pvc -xelatex $(TEX)

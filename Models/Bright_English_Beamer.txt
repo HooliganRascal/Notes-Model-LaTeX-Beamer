@@ -1,8 +1,6 @@
 % !TEX program = xelatex
-% English beamer model matching the LaTeX note style
 \documentclass[aspectratio=169]{beamer}
 
-% ---- Packages ----
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -12,24 +10,9 @@
 \usepackage{xcolor}
 \usepackage{soul}
 
-% ---- Note colours (same as the LaTeX notes) ----
 \definecolor{notelightblue}{RGB}{185,220,245}
+\definecolor{mygreen}{rgb}{.125,.5,.25}
 \colorlet{noteobsidian}{violet!50!white}
-
-% ---- Dark theme matching the LaTeX notes ----
-\setbeamercolor{background canvas}{bg=darkgray}
-\setbeamercolor{normal text}{fg=white}
-\setbeamercolor{structure}{fg=cyan}
-\setbeamercolor{frametitle}{fg=white}
-\setbeamercolor{title}{fg=white}
-\setbeamercolor{subtitle}{fg=white}
-\setbeamercolor{author}{fg=white}
-\setbeamercolor{date}{fg=white}
-\setbeamercolor{section in toc}{fg=cyan}
-\setbeamercolor{itemize item}{fg=cyan}
-\setbeamercolor{itemize subitem}{fg=cyan}
-\setbeamercolor{block title}{fg=white, bg=gray!40!black}
-\setbeamercolor{block body}{fg=white, bg=gray!25!black}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{%
@@ -43,7 +26,6 @@
   breaklinks = true,
 }
 
-% ---- Remark boxes (same idea as \noteremark / \obsidianremark in the notes) ----
 \setbeamercolor{note remark}{bg=notelightblue}
 \setbeamercolor{obsidian remark}{bg=noteobsidian}
 \newcommand{\noteremark}[1]{%
@@ -55,11 +37,12 @@
     \textcolor{black}{\textbf{Remark.} #1}
   \end{beamercolorbox}\vspace{0.5em}}
 
-\title{Mathematical Analysis}
-\author{Guernica}
+\title{Title}
+\author{Guernica-Cosmos}
 \date{\today}
 
 \begin{document}
+\metroset{block=fill}
 
 \begin{frame}
   \titlepage
@@ -82,9 +65,9 @@
 
 \begin{frame}{Mathematics}
   De Morgan's law for sets:
-  \[
+  $$
     \bigl(A\cup B\bigr)^{c}=A^{c}\cap B^{c}
-  \]
+  $$
   \obsidianremark{Use this box for an Obsidian-linked remark.}
 \end{frame}
 

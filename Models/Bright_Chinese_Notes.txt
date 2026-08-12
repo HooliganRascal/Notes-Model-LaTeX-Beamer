@@ -1,0 +1,79 @@
+% !TEX program = xelatex
+\documentclass{article}
+
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{diagbox}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{indentfirst}
+\usepackage{xcolor, soul}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKmonofont{Noto Serif CJK SC}
+\usepackage[a4paper,
+			top=2.0cm,             
+			bottom=2.0cm, 
+			left=2.5cm, 
+			right=2.5cm]{geometry}
+\usepackage{color}
+
+\definecolor{notelightblue}{RGB}{185,220,245}
+\colorlet{noteobsidian}{violet!50!white}
+
+\newcommand{\noteremark}[1]{
+	\par\smallskip\noindent\colorbox{notelightblue}{
+		\parbox{0.96\linewidth}{
+			\small\raggedright\textcolor{black}{
+				\textbf{Remark.} #1
+			}
+		}
+	}\par\smallskip
+}
+
+\newcommand{\obsidianremark}[1]{
+	\par\smallskip\noindent\colorbox{noteobsidian}{
+		\parbox{0.96\linewidth}{
+			\small\raggedright\textcolor{black}{
+				\textbf{Remark.} #1
+			}
+		}
+	}\par\smallskip
+}
+
+\linespread{1.4}
+% \pagecolor{darkgray}
+% \color{white}
+\onehalfspacing
+
+\hypersetup{
+	colorlinks = true,
+	allcolors = cyan,
+	urlcolor = yellow,
+	pdfstartview = Fit,
+	breaklinks = true,
+}
+
+\title{标题}
+\author{Guernica-Cosmos}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+\section{第一章}
+
+\newpage
+
+\end{document}

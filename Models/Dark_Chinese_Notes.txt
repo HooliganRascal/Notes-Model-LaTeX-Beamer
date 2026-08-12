@@ -13,8 +13,8 @@
 \usepackage{xcolor, soul}
 \usepackage{xeCJK}
 \usepackage{xcolor}
-\setCJKmainfont{Noto Serif CJK TC}
-\setCJKmonofont{Noto Serif CJK TC}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKmonofont{Noto Serif CJK SC}
 \usepackage[a4paper,
 			top=2.0cm,             
 			bottom=2.0cm, 
